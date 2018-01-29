@@ -5,40 +5,35 @@
     <meta charset="utf-8">
     <link href="/css/screen.css" media="screen" rel="Stylesheet" type="text/css" />
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <script src="/js/tsuru.js" async=""></script>
 </head>
 <body>
 
 <div class="container">
 
-<div class="header">
-    <div class="menu">
-       <ul>
-            <li><a href="/en/">Home</a></li>
-            <li><a href="/en/jobs.html">Employment</a></li>
-            <li><a href="/en/contactus.html">Contact Us</a></li>
-        </ul>
-    </div>
-</div>
-
-    <div class="content clearfix">
-
-    <div class="content-left">
-        <img src="/img/tetto.jpg" alt="Tsuru Captial" />
-    </div>
-
-    <div class="content-right">
-
-    <h1 id="error-404">Error 404</h1>
+    <main class="clearfix">
+      <h1 id="error-404">Error 404</h1>
 <p>The page you are looking for does not exist. <a href="/en/">Go back</a>.</p>
+    </main> <!-- content -->
 
-    </div> <!-- content-left -->
-    </div> <!-- content -->
-
-    <div class="footer">
-        <p class="center">&copy; 2010-2017 Tsuru Capital</p>
-    </div>
+    <footer>
+        <p class="center">&copy; 2010-2018 Tsuru Capital</p>
+    </footer>
 
 </div> <!-- container -->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="modal-img">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
 
 <script type="text/javascript">
   var _gaq = _gaq || [];

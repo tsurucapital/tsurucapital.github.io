@@ -5,30 +5,16 @@
     <meta charset="utf-8">
     <link href="../css/screen.css" media="screen" rel="Stylesheet" type="text/css" />
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <script src="../js/tsuru.js" async></script>
 </head>
 <body>
 
 <div class="container">
 
-<div class="header">
-    <div class="menu">
-       <ul>
-            <li><a href="../en/">Home</a></li>
-            <li><a href="../en/jobs.html">Employment</a></li>
-            <li><a href="../en/contactus.html">Contact Us</a></li>
-        </ul>
-    </div>
-</div>
+    <main class="clearfix">
+      <article id="code-sample">
 
-    <div class="content clearfix">
-
-    <div class="content-left">
-        <img src="../img/logo.jpg" alt="Tsuru Captial" />
-    </div>
-
-    <div class="content-right">
-
-    <h1>Code Sample</h1>
+<h1>Code Sample</h1>
 
 <p>
 
@@ -112,8 +98,8 @@ throughput and memory usage.
     Issue seq.-no.                          3
     Market Status Type                      2
     Total bid quote volume                  7
-    Best bid price(1st)                     5
-    Best bid quantity(1st)                  7
+    Best bid price(1st)                     5   Decimals
+    Best bid quantity(1st)                  7   Decimals
     Best bid price(2nd)                     5
     Best bid quantity(2nd)                  7
     Best bid price(3rd)                     5
@@ -148,16 +134,28 @@ throughput and memory usage.
     *Quote accept time*                     8  HHMMSSuu
     End of Message                          1  0xff
 </pre>
+</article>
 
+    </main> <!-- content -->
 
-    </div> <!-- content-left -->
-    </div> <!-- content -->
-
-    <div class="footer">
-        <p class="center">&copy; 2010-2017 Tsuru Capital</p>
-    </div>
+    <footer>
+        <p class="center">&copy; 2010-2018 Tsuru Capital</p>
+    </footer>
 
 </div> <!-- container -->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="modal-img">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
 
 <script type="text/javascript">
   var _gaq = _gaq || [];
