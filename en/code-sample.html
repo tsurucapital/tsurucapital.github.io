@@ -21,9 +21,15 @@
 Your task is to create a program, written in <a href="http://www.haskell.org">Haskell</a>, that will parse and print
 quote messages from a market data feed. When invoked with an <tt>-r</tt>
 flag, the program should re-order the messages according to the ‘quote
-accept time’ at the exchange.
+accept time’ at the exchange.  Your code:
 
 </p>
+
+<ol>
+<li>must be semantically correct;</li>
+<li>must be performant regardless of the input file size, in terms of throughput and memory usage;</li>
+<li>must compile with <code>-Wall -Werror</code>.</li>
+</ol>
 
 <h2>Parsing the Market Data Feed</h2>
 
@@ -76,14 +82,6 @@ the pcap packet time is never more than 3 seconds.
 A small sample file with a capture of the Kospi 200 market data feed
 from the first 30s of trading on 2011-02-16 can be downloaded
 <a href="../file/mdf-kospi200.20110216-0.pcap.gz">here</a>.
-
-</p>
-
-<p>
-
-It is particularly important that your program runs just as efficiently
-on a small file as it does on a large file (8GB+), in terms of
-throughput and memory usage.
 
 </p>
 
