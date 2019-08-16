@@ -3,78 +3,57 @@
 <head>
     <title>Home - Tsuru Capital</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <link href="../css/screen.css" media="screen" rel="Stylesheet" type="text/css" />
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="../js/tsuru.js" async></script>
 </head>
 <body>
 
 <div class="container">
 
-    <main class="clearfix">
-        <header id="what-we-do">
+    <div id="container">
+  <header id="what-we-do">
+    <img src="../img/logo-small.png" id="logo">
+    <div id="blurb">
+      Tsuru Capital is a proprietary trading fund focused on options market-making. <br>
+      In-house software is mainly developed in <a href="http://www.haskell.org">Haskell</a>.
+      <div id="links">
+        <a href="https://www.linkedin.com/company/tsurucapital/about/" class="fa fa-linkedin"></a>
+        <a href="https://www.facebook.com/tsurucapital" class="fa fa-facebook"></a>
+        <a href="https://github.com/tsurucapital/" class="fa fa-github"></a>
+      </div>
+    </div>
   </header>
 
-  <section id="employment">
-    <img src="../img/logo-small.png" id="teto">
-    <div>
-    <div class="pane">
-      <p id="what-we-do">
-      Tsuru Capital is a proprietary trading fund focused on options market-making. In-house software is mainly developed in <a href="http://www.haskell.org">Haskell</a>.</p>
-      <p style="font-size: larger;">
-        We are not actively hiring, but we will look at applications.
-      </p>
-      <p>The company language here is English.</p>
-    </div>
-    <div style="display: flex;">
-    <div id="developers" class="pane" style="width: 50%;">
-      <h1>Developers</h1>
-      <p>Developers implement new trading strategies and analysis tools mostly in Haskell.</p>
+<main>
+  <section>
+    <h1>Jobs</h1>
+    <p style="text-align:center">We are not actively hiring, but we will look at applications.</p>
+    <h2><span>Developers</span></h2>
+    <p>Developers implement new trading strategies and analysis tools mostly in Haskell.</p>
 
-      <p>
-          <ol style="margin-left: 10%">
-              <li>Prepare your solution for the code sample; see <a href="../en/code-sample.html">this page</a> for details.</li>
-              <li>Send your cover letter, CV, and the code sample to <span class="red">jobs [@] tsurucapital [.] com</span></li>
-              <li>Schedule an interview in the Tokyo office, or a group video (requires Skype 5.0+ or Google Hangouts)</li>
-              <li>Three month working interview or internship in Tokyo</li>
-          </ol>
-      </p>
-    </div>
+    <ol style="margin-left: 2.5em">
+        <li>Prepare your solution for the code sample; see <a href="../en/code-sample.html">this page</a> for details.</li>
+        <li>Send your cover letter, CV, and the code sample to <span class="red">jobs [@] tsurucapital [.] com</span></li>
+        <li>Schedule an interview in the Tokyo office, or a group video</li>
+        <li>Three month working interview or internship in Tokyo</li>
+    </ol>
+    <h2><span>Traders</span></h2>
+    <p>We are interested in people who can bring us new strategies, so make sure to let us know what you bring to the table.</p>
+    <ol style="margin-left: 2.5em">
+        <li>Send your CV and a cover letter to <span class="red">jobs [@] tsurucapital [.] com</span>.</li>
+        <li>Schedule an interview in the Tokyo office, or a group video</li>
+        <li>Three month working interview or internship in Tokyo</li>
+    </ol>
 
-    <div id="traders" class="pane" style="width: 50%;">
-      <h1>Traders</h1>
-      <div>
-        <p>We are interested in people who can bring us new strategies, so make sure to let us know what you bring to the table.</p>
-        <p>
-          <ol style="margin-left: 10%">
-              <li>Send your CV and a cover letter to <span class="red">jobs [@] tsurucapital [.] com</span>.</li>
-              <li>Schedule an interview in the Tokyo office, or a group video (requires Skype 5.0+ or Google Hangouts)</li>
-              <li>Three month working interview or internship in Tokyo</li>
-          </ol>
-        </p>
-      </div>
-    </div>
-    </div>
-  </div>
-  </section>
-
-  <section id="culture">
-    <h1>Office</h1>
-    <div class="gallery">
-      <div class="gallery-column">
-        <img class="gallery-img" alt="The espresso machine and grinders" src="../img/commercial-superautomatic-espresso-coffee-machine.jpg" />
-        <img class="gallery-img" alt="Teto" src="../img/teto-small.jpg" />
-      </div>
-      <div class="gallery-column">
-        <img class="gallery-img tall" alt="Landscape in a vase" src="../img/flowers.jpg" />
-      </div>
-    </div>
   </section>
 
   <section id="contact">
-    <img src="../img/tetto.jpg" id="teto">
-    <div class="pane">
-    <h1>Contact us</h1>
+    <h1>Contact Us</h1>
+    <p>freenode.net #tsurucapital</p>
+    <h2><span>Address</span></h2>
     <p translate="no">
       Tsuru Capital LLC<br>
       Holland Hills RoP #1307<br>
@@ -86,28 +65,35 @@
       〒105-0001 東京都港区虎ノ門5丁目11-1<br>
       オランダヒルズ森タワーRoP 1307<br>
     </p>
-
-    <h3>Access</h3>
     <p>
       We're in the resident's section called RoP. The entrance is up the
       street from the office entrance.
     </p>
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3241.642649498471!2d139.743883!3d35.661175!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b97061cc7bf%3A0x85850fea7fe04fda!2z77y0772T772V772S772V77yj772B772Q772J772U772B772M77ys77ys77yj!5e0!3m2!1sja!2sus!4v1473726647758" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3241.642649498471!2d139.743883!3d35.661175!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b97061cc7bf%3A0x85850fea7fe04fda!2z77y0772T772V772S772V77yj772B772Q772J772U772B772M77ys77ys77yj!5e0!3m2!1sja!2sus!4v1473726647758" width="500" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-    <h2>Chat</h2>
-    <p>
-    IRC: freenode.net #tsurucapital<br>
-    Follow &amp; Like us on <a href="https://www.linkedin.com/company/tsurucapital">LinkedIn</a>
-    and/or <a href="https://www.facebook.com/tsurucapital">Facebook</a>
-    </p>
+  </section>
+
+  <section id="culture">
+    <h1>Gallery</h1>
+    <div class="gallery">
+      <div class="gallery-column">
+        <img class="gallery-img" alt="The espresso machine and grinders" src="../img/commercial-superautomatic-espresso-coffee-machine.jpg" />
+        <img class="gallery-img" alt="Teto" src="../img/teto-small.jpg" />
+      </div>
+      <div class="gallery-column">
+        <img class="gallery-img tall" alt="Landscape in a vase" src="../img/flowers.jpg" />
+      </div>
     </div>
   </section>
 
-    </main> <!-- content -->
+</main>
+</div>
+
 
     <footer>
-        <p class="center">&copy; 2010-2018 Tsuru Capital</p>
+        <p class="center">Last update: 2019-08-16</p>
+        <p class="center">&copy; 2010-2019 Tsuru Capital</p>
     </footer>
 
 </div> <!-- container -->
@@ -125,15 +111,5 @@
   <div id="caption"></div>
 </div>
 
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-16453382-1']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
 </body>
 </html>

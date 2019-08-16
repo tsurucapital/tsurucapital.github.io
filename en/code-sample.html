@@ -3,16 +3,18 @@
 <head>
     <title>Code Sample - Tsuru Capital</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <link href="../css/screen.css" media="screen" rel="Stylesheet" type="text/css" />
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="../js/tsuru.js" async></script>
 </head>
 <body>
 
 <div class="container">
 
-    <main class="clearfix">
-      <article id="code-sample">
+    <main>
+<article id="code-sample">
 
 <h1>Code Sample</h1>
 
@@ -28,7 +30,7 @@ accept time’ at the exchange.  Your code:
 <ol style="margin-left: 3em;">
 <li>must be semantically correct;</li>
 <li>must be performant regardless of the input file size, in terms of throughput and memory usage;</li>
-<li>must compile with <code>-Wall -Werror</code>.</li>
+<li>must compile with <code>-Wall -Werror</code> with the latest stable GHC release.</li>
 </ol>
 
 <h2>Parsing the Market Data Feed</h2>
@@ -86,58 +88,234 @@ from the first 30s of trading on 2011-02-16 can be downloaded
 </p>
 
 <h2>Quote Packet Specification</h2>
+<table>
+  <tr>
+    <th>Item Name</th>
+    <th>Length</th>
+    <th>Remark</th>
+  </tr>
+  <tr>
+    <td>Data Type</td>
+    <td>2</td>
+    <td>B6</td>
+  </tr>
+  <tr>
+    <td>Information Type</td>
+    <td>2</td>
+    <td>03</td>
+  </tr>
+  <tr>
+    <td>Market Type</td>
+    <td>1</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Issue code</td>
+    <td>12</td>
+    <td>ISIN code</td>
+  </tr>
+  <tr>
+    <td>Issue seq.-no.</td>
+    <td>3</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Market Status Type</td>
+    <td>2</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Total bid quote volume</td>
+    <td>7</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Best bid price(1st)</td>
+    <td>5</td>
+    <td>Decimals</td>
+  </tr>
+  <tr>
+    <td>Best bid quantity(1st)</td>
+    <td>7</td>
+    <td>Decimals</td>
+  </tr>
+  <tr>
+    <td>Best bid price(2nd)</td>
+    <td>5</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Best bid quantity(2nd)</td>
+    <td>7</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Best bid price(3rd)</td>
+    <td>5</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Best bid quantity(3rd)</td>
+    <td>7</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Best bid price(4th)</td>
+    <td>5</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Best bid quantity(4th)</td>
+    <td>7</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Best bid price(5th)</td>
+    <td>5</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Best bid quantity(5th)</td>
+    <td>7</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Total ask quote volume</td>
+    <td>7</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Best ask price(1st)</td>
+    <td>5</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Best ask quantity(1st)</td>
+    <td>7</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Best ask price(2nd)</td>
+    <td>5</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Best ask quantity(2nd)</td>
+    <td>7</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Best ask price(3rd)</td>
+    <td>5</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Best ask quantity(3rd)</td>
+    <td>7</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Best ask price(4th)</td>
+    <td>5</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Best ask quantity(4th)</td>
+    <td>7</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Best ask price(5th)</td>
+    <td>5</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Best ask quantity(5th)</td>
+    <td>7</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>No. of best bid valid quote(total)</td>
+    <td>5</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>No. of best bid quote(1st)</td>
+    <td>4</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>No. of best bid quote(2nd)</td>
+    <td>4</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>No. of best bid quote(3rd)</td>
+    <td>4</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>No. of best bid quote(4th)</td>
+    <td>4</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>No. of best bid quote(5th)</td>
+    <td>4</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>No. of best ask valid quote(total)</td>
+    <td>5</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>No. of best ask quote(1st)</td>
+    <td>4</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>No. of best ask quote(2nd)</td>
+    <td>4</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>No. of best ask quote(3rd)</td>
+    <td>4</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>No. of best ask quote(4th)</td>
+    <td>4</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>No. of best ask quote(5th)</td>
+    <td>4</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><b>Quote accept time</b></td>
+    <td>8</td>
+    <td>HHMMSSuu</td>
+  </tr>
+  <tr>
+    <td>End of Message</td>
+    <td>1</td>
+    <td>0xff</td>
+  </tr>
+</table>
 
-<pre>    ITEM NAME                              len  Remark
-    --------------------------------------+---+---------------
-    Data Type                               2   B6
-    Information Type                        2   03
-    Market Type                             1   4
-    Issue code                             12   ISIN code
-    Issue seq.-no.                          3
-    Market Status Type                      2
-    Total bid quote volume                  7
-    Best bid price(1st)                     5   Decimals
-    Best bid quantity(1st)                  7   Decimals
-    Best bid price(2nd)                     5
-    Best bid quantity(2nd)                  7
-    Best bid price(3rd)                     5
-    Best bid quantity(3rd)                  7
-    Best bid price(4th)                     5
-    Best bid quantity(4th)                  7
-    Best bid price(5th)                     5
-    Best bid quantity(5th)                  7
-    Total ask quote volume                  7
-    Best ask price(1st)                     5
-    Best ask quantity(1st)                  7
-    Best ask price(2nd)                     5
-    Best ask quantity(2nd)                  7
-    Best ask price(3rd)                     5
-    Best ask quantity(3rd)                  7
-    Best ask price(4th)                     5
-    Best ask quantity(4th)                  7
-    Best ask price(5th)                     5
-    Best ask quantity(5th)                  7
-    No. of best bid valid quote(total)      5
-    No. of best bid quote(1st)              4
-    No. of best bid quote(2nd)              4
-    No. of best bid quote(3rd)              4
-    No. of best bid quote(4th)              4
-    No. of best bid quote(5th)              4
-    No. of best ask valid quote(total)      5
-    No. of best ask quote(1st)              4
-    No. of best ask quote(2nd)              4
-    No. of best ask quote(3rd)              4
-    No. of best ask quote(4th)              4
-    No. of best ask quote(5th)              4
-    *Quote accept time*                     8  HHMMSSuu
-    End of Message                          1  0xff
-</pre>
+<div style="text-align:center; margin: 2em;">
+  <a href="../en/">Go back to the main page</a>
+</div>
 </article>
+</main>
 
-    </main> <!-- content -->
 
     <footer>
-        <p class="center">&copy; 2010-2018 Tsuru Capital</p>
+        <p class="center">Last update: 2019-08-16</p>
+        <p class="center">&copy; 2010-2019 Tsuru Capital</p>
     </footer>
 
 </div> <!-- container -->
@@ -155,15 +333,5 @@ from the first 30s of trading on 2011-02-16 can be downloaded
   <div id="caption"></div>
 </div>
 
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-16453382-1']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
 </body>
 </html>
